@@ -14,10 +14,16 @@ function clickButtonStart() {
     timerId = setInterval(() => {
          document.body.style.background = getRandomHexColor();
      }, 1000);
+     if (buttonStart.disabled = true) {
+        buttonStop.disabled = false
+    } 
  };
  
  function clickButtonStop() {
      clearInterval(timerId);
+     if (buttonStop.disabled = true) {
+        buttonStart.disabled = false
+    } 
  };
 
 
