@@ -43,7 +43,7 @@ const options = {
     }
     buttonStart.disabled = false;
 
-    function showTimer () {
+    function timerSettings () {
       const currentTime = new Date();
       localStorage.setItem('selectedData', selectedDates[0]);
       
@@ -70,7 +70,8 @@ const options = {
       }};
 
     function onClick () {
-      timer = setInterval(showTimer, 1000);
+      timer = setInterval(timerSettings, 1000);
+      buttonStart.disabled = true;
     };
 
     buttonStart.addEventListener('click', onClick);
