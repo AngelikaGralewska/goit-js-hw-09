@@ -66,7 +66,7 @@ const options = {
 
       if (dataDays.textContent && dataHours.textContent && dataMinutes.textContent && dataSeconds.textContent === '00') {
         clearInterval(timer);
-        Notiflix.Notify.success('It is completed successfully');
+        Notiflix.Notify.success('It is the end of waiting');
       }};
 
     function onClick () {
