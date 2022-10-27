@@ -18,11 +18,11 @@ function ButonSubmit(event) {
   for (let position = 1; position <= formData.amount; position++) {
     createPromise(position, formDelay)
       .then(({ position, delay }) => {
-        Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, 
+        Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`, 
         );
       })
       .catch(({ position, delay }) => {
-        Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`,
+        Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`,
         );
       });
 
@@ -33,7 +33,6 @@ function ButonSubmit(event) {
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
-
     setTimeout(() => {
       if (shouldResolve) {
         resolve({ position, delay });
