@@ -15,7 +15,7 @@ function ButonSubmit(event) {
 
   let formDelay = formData.delay;
 
-  for (let position = 1; position <= formData.amount; position++) {
+  for (let position = 1; position <= amount; position++) {
     createPromise(position, formDelay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`, 
